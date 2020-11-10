@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  redis:
+    host: localhost
+    database: 0
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    timeout: 3000ms
+
+# 自定义redis key
+redis:
+  key:
+    prefix:
+      authCode: "portal:authCode:"
+    expire:
+      authCode: 120 # 验证码超期时间
+
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+    - classpath*:com/**/mapper/*.xml
+
+
