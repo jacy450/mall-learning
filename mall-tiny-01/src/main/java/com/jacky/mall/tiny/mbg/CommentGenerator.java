@@ -50,4 +50,5 @@ public class CommentGenerator extends DefaultCommentGenerator {
         addJavadocTag(field, false);
         field.addJavaDocLine(" */");
     }
+
 }
