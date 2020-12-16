@@ -6,21 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mall-learning" />
-        <module name="mall-tiny-02" />
-        <module name="mall-tiny-01" />
         <module name="mall-tiny" />
+        <module name="mall-tiny-01" />
+        <module name="mall-tiny-02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mall-learning" target="1.5" />
-      <module name="mall-tiny" target="1.5" />
+      <module name="mall-learning" target="1.8" />
+      <module name="mall-tiny" target="1.8" />
       <module name="mall-tiny-01" target="1.8" />
       <module name="mall-tiny-02" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mall-tiny" options="-parameters" />
       <module name="mall-tiny-01" options="-parameters" />
       <module name="mall-tiny-02" options="-parameters" />
     </option>
